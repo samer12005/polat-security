@@ -8,7 +8,7 @@ client.on("ready", async () => {
   console.log(`${client.guilds.cache.size} Servers .`);
   console.log(`${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} Users .`);
  client.user.setStatus("invisible")
-  client.user.setActivity("s!help | Security Is Here", {
+  client.user.setActivity("p!help | Security", {
     type: "PLAYING"
   });
 });
@@ -26,7 +26,7 @@ const Discord = require('discord.js')
 const cooldown = new Set();
 const cdtime = 10;
 
- const prefix = "s!";
+ const prefix = "p!";
 client.on("message", async message => {
   if (message.content.startsWith(prefix+"help")) {
    if (!message.channel.guild)
@@ -80,9 +80,9 @@ client.on("message", async message => {
 \`anti bot\` **on / off**
 \`anti prone\` **on**
 \`anti hack\` **on**
-[Click Here To invite](https://discord.com/api/oauth2/authorize?client_id=922752221232369694&permissions=8&scope=bot) 
+[Click Here To invite]() 
 
-[Click Here To Support](https://discord.gg/xJR7Sn84yu)
+[Click Here To Support]()
 `);
 
     message.channel.send(help);
@@ -126,7 +126,7 @@ client.on("message", message => {
       .setColor("GREEN")
       .setTitle("=--> click touch for link bot <--=")
       .setURL(
-        "https://discord.com/api/oauth2/authorize?client_id=922752221232369694&permissions=8&scope=bot"
+        ""
       );
     message.channel.send(embed);
      message.react(":white_check_mark:");
@@ -441,7 +441,7 @@ client.on("message", message => {
           .setTitle("Nicknamed User!")
           .setColor("RANDOM")
           .setThumbnail(message.author.avatarURL)
-           .setFooter(message.author.username,  `https://cdn.discordapp.com/emojis/771689685579333673.gif?v=1`
+           .setFooter(message.author.username,  ``
 )
           .setTimestamp()
 
@@ -752,7 +752,7 @@ client.on("message", message => {
  ////////////////////
 ////////////////// join server
 client.on('guildCreate', guild => {
-client.channels.cache.get("867612989166059550").send(`
+client.channels.cache.get("").send(`
 ✅ **Join Server**: ${client.guilds.cache.size}
 🔠 **Server Name**: ${guild.name}
 👑 **Server Owner**: ${guild.owner}
@@ -761,7 +761,7 @@ client.channels.cache.get("867612989166059550").send(`
 });
 ///////////////// left server
 client.on('guildDelete', guild => {
-  client.channels.cache.get("867613033726214173").send(`
+  client.channels.cache.get("").send(`
 ❎ **Lift Server**: ${client.guilds.cache.size}
 🔠 **Server Name**: ${guild.name}
 👑 **Server Owner**: ${guild.owner}
@@ -771,4 +771,4 @@ client.on('guildDelete', guild => {
 
 
 client.login("تــــۆکین لێرە دانێ");
-////////////Coded By ANO
+////////////Coded By POLAT
